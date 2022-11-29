@@ -1,0 +1,90 @@
+body {
+    background-image: url("../image/BackgroundLogin.jpg");
+    background-size: cover;
+}
+
+.login-register h2{
+    margin: 6% 0 10% 0;
+}
+
+.login-register .box {
+    background: #000;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 1% 2%;
+    transition: 0.5s;
+    width: 40%;
+    margin: 8% 30%;
+    text-align: center;
+}
+
+.login-register label{
+    text-align: left;
+}
+  
+.box:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    filter: blur(30px);
+}
+  
+.box:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.login-register span {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    right: 4px;
+    bottom: 4px;
+    background: rgb(0, 0, 0, 0.5);
+    z-index: 5;
+}
+
+.login-register button{
+    width: 38%;
+    margin: 6% 6%;
+}
+
+.login-register button a:hover{
+    color: white;
+    text-decoration: underline;
+}
+
+.content {
+    z-index: 10;
+    color: #fff;
+}
+  
+.content p {
+    font-size: 15px;
+    margin-top: 8%;
+}
+  
+.color:after {
+    background: linear-gradient(315deg, #dfc7ff, #3f4747);
+}
+  
+.color:before {
+    background: linear-gradient(315deg, #dfc7ff, #3f4747);
+}
+
+.admin:hover{
+    color:yellow;
+    text-decoration: underline;
+}
+
+.alert-note{
+    color: red;
+}

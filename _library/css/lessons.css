@@ -1,0 +1,9 @@
+.basics-wrapper{
+    background-image: linear-gradient(to right, #141414,#4b4b4b,#141414);
+    padding-top: 8%;
+    color: white;
+}
+
+.basics-wrapper h4{
+    text-align: center;
+}

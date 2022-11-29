@@ -1,0 +1,11 @@
+#profileContent{
+    background-image: linear-gradient(to right, #141414,#4b4b4b,#141414);
+    padding: 8% 0 5% 0;
+    color: white;
+}
+
+#profile-image{
+    margin: 2% 0 1% 0;
+    width: 20%;
+    border-radius: 100%;
+}

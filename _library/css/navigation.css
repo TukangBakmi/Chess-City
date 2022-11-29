@@ -1,0 +1,76 @@
+header {
+    height: 65px;
+    width: 100%;
+    background-color: rgba(43, 66, 70, 0.8);
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+
+header .logo {
+    height: 100%;
+}
+
+.header-left {
+    float: left;
+}
+
+.header-right {
+    float: right;
+}
+
+.nav-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: all 0.5s;
+}
+
+.nav-item:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: white;
+}
+
+.nav-link{
+    color:white;
+}
+
+.header-right a {
+    line-height: 65px;
+    padding: 0 25px;
+    display: block;
+}
+
+.dropdown-menu{
+    background-color: rgba(43, 66, 70, 0.8);
+}
+
+.dropdown-item{
+    color: white;
+}
+
+.dropdown-item:hover{
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+#profilImage{
+    height: 65px;
+    width: 65px;
+    border-radius: 100%;
+}
+
+@media(max-width:991px) {
+    .header-right{
+        display: none;
+    }
+
+    .navDrop{
+        line-height: 49px;
+        padding: 0 25px;
+        display: block !important;
+    }
+
+    .container {
+        width: 960px;
+        padding: 0 15px;
+        margin: 0 auto;
+    }
+}

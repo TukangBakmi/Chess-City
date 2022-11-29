@@ -1,0 +1,132 @@
+body {
+    background-color: #000;
+    background-image: url("../image/BackgroundLogin.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.login-register h2{
+    margin: 6% 0 10% 0;
+}
+
+.login-register .box {
+    background: #000;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 1% 2%;
+    transition: 0.5s;
+    width: 40%;
+    margin: 8% 30%;
+    text-align: center;
+}
+
+.login-register label{
+    text-align: left;
+}
+  
+.box:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    filter: blur(30px);
+}
+  
+.box:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.login-register span {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    right: 4px;
+    bottom: 4px;
+    background: rgb(0, 0, 0, 0.5);
+    z-index: 5;
+}
+
+.login-register button{
+    width: 38%;
+    margin: 6% 6%;
+}
+
+.login-register button a:hover{
+    color: white;
+    text-decoration: underline;
+}
+
+.content {
+    z-index: 10;
+    color: #fff;
+}
+  
+.content p {
+    font-size: 15px;
+    margin-top: 8%;
+}
+  
+.color:after {
+    background: linear-gradient(315deg, #dfc7ff, #3f4747);
+}
+  
+.color:before {
+    background: linear-gradient(315deg, #dfc7ff, #3f4747);
+}
+
+.admin:hover{
+    color:yellow;
+    text-decoration: underline;
+}
+
+.alert-note{
+    color: red;
+}
+
+/* ---------------------- BUTTON ----------------------*/
+
+.btn-yellow{
+    background-color: rgb(255, 179, 0);
+}
+
+.btn-yellow:hover{
+    background-image: linear-gradient(rgb(250, 255, 148),rgb(255, 140, 0));
+}
+  
+.btn-green{
+    background-color: rgb(53, 255, 56);
+    color: black;
+}
+  
+.btn-green:hover{
+    background-image: linear-gradient(rgb(149, 255, 125),rgb(0, 147, 0));
+    color: black;
+}
+
+.btn-red{
+    background-color: rgb(255, 53, 53);
+    color: black;
+}
+  
+.btn-red:hover{
+    background-image: linear-gradient(rgb(255, 125, 125),rgb(147, 0, 0));
+    color: black;
+}
+
+.btn-blue{
+    background-color: rgb(32, 219, 252);
+    color: black;
+}
+  
+.btn-blue:hover{
+    background-image: linear-gradient(rgb(111, 248, 255),rgb(0, 153, 255));
+    color: black;
+}

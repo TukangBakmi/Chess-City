@@ -1,0 +1,103 @@
+#bgContact {
+    background-image: url("../image/BackgroundContact.jpg");
+    background-size: cover;
+}
+
+#webLogoContact{
+    width: 200px;
+}
+
+.contactus h2{
+    margin: 6% 0 10% 0;
+}
+
+.contactus .box {
+    border-radius: 30px;
+    background: #000;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 1% 2%;
+    transition: 0.5s;
+    width: 500px;
+    margin: 8% 0;
+    text-align: center;
+}
+
+.contactus label{
+    text-align: left;
+}
+  
+.box:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    filter: blur(30px);
+}
+  
+.contactus .box:after {
+    border-radius: 30px;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.contactus span {
+    border-radius: 30px;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    right: 4px;
+    bottom: 4px;
+    background: rgb(0, 0, 0, 0.5);
+    z-index: 5;
+}
+
+.contactus button{
+    width: 38%;
+    margin: 6% 6%;
+}
+
+.contactus button a:hover{
+    color: white;
+    text-decoration: underline;
+}
+
+.content {
+    z-index: 10;
+    color: #fff;
+}
+  
+.content p {
+    font-size: 15px;
+    margin-top: 8%;
+}
+  
+.color:after {
+    background: linear-gradient(315deg, #dfc7ff, #3f4747);
+}
+  
+.color:before {
+    background: linear-gradient(315deg, #dfc7ff, #3f4747);
+}
+
+.admin:hover{
+    color:yellow;
+    text-decoration: underline;
+}
+
+.alert-note{
+    color: red;
+}
+
+#feedbackText{
+    width: 400px;
+    height: 100px;
+    resize: none;
+}
