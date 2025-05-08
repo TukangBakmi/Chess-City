@@ -12,7 +12,10 @@
         echo "<p>Account not found.<p>";
         echo "<a href='loginAdmin.php' class='btn btn-primary'>Try Again</a>";
     } else {
-        if ($password === $checkPw) {
+        $row = $checkPw->fetch_assoc();
+        $storedHash = $row['password'];
+
+        if (password_verify($password, $storedHash)) {
             // set session
             $_SESSION['name'] = $name;
             $_SESSION['adminEmail'] = $email;

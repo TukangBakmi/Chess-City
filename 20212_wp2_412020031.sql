@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 04 Jul 2022 pada 18.55
--- Versi server: 10.4.13-MariaDB
--- Versi PHP: 7.4.7
+-- Generation Time: May 08, 2025 at 04:54 PM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -20,40 +20,38 @@ SET time_zone = "+00:00";
 --
 -- Database: `20212_wp2_412020031`
 --
-CREATE DATABASE IF NOT EXISTS `20212_wp2_412020031` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `20212_wp2_412020031`;
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `admin`
+-- Table structure for table `admin`
 --
 
 CREATE TABLE `admin` (
   `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data untuk tabel `admin`
+-- Dumping data for table `admin`
 --
 
 INSERT INTO `admin` (`email`, `password`) VALUES
-('chesscity@gmail.com', '$2y$10$J84jWFiJsinaIjSlrp4ha.HhYVpwbzM9D//GPqtGQlBUKakn/gvaW');
+('chesscity@gmail.com', '$2y$10$cxarqY1NGX7efeRK0sG1UOgCVYiE4OAmshwsDW79rHZRxGloL3o7u');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `authors`
+-- Table structure for table `authors`
 --
 
 CREATE TABLE `authors` (
   `id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data untuk tabel `authors`
+-- Dumping data for table `authors`
 --
 
 INSERT INTO `authors` (`id`, `name`) VALUES
@@ -64,7 +62,7 @@ INSERT INTO `authors` (`id`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `feedback`
+-- Table structure for table `feedback`
 --
 
 CREATE TABLE `feedback` (
@@ -73,10 +71,10 @@ CREATE TABLE `feedback` (
   `name` varchar(255) NOT NULL,
   `date` datetime NOT NULL DEFAULT current_timestamp(),
   `text` mediumtext NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data untuk tabel `feedback`
+-- Dumping data for table `feedback`
 --
 
 INSERT INTO `feedback` (`id`, `user_id`, `name`, `date`, `text`) VALUES
@@ -86,17 +84,17 @@ INSERT INTO `feedback` (`id`, `user_id`, `name`, `date`, `text`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `gallery`
+-- Table structure for table `gallery`
 --
 
 CREATE TABLE `gallery` (
   `id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
   `image` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data untuk tabel `gallery`
+-- Dumping data for table `gallery`
 --
 
 INSERT INTO `gallery` (`id`, `name`, `image`) VALUES
@@ -110,7 +108,7 @@ INSERT INTO `gallery` (`id`, `name`, `image`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `news`
+-- Table structure for table `news`
 --
 
 CREATE TABLE `news` (
@@ -120,10 +118,10 @@ CREATE TABLE `news` (
   `content` mediumtext NOT NULL,
   `author_id` int(11) NOT NULL,
   `image` varchar(255) NOT NULL DEFAULT 'default.png'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data untuk tabel `news`
+-- Dumping data for table `news`
 --
 
 INSERT INTO `news` (`id`, `title`, `date`, `content`, `author_id`, `image`) VALUES
@@ -133,7 +131,7 @@ INSERT INTO `news` (`id`, `title`, `date`, `content`, `author_id`, `image`) VALU
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `shop`
+-- Table structure for table `shop`
 --
 
 CREATE TABLE `shop` (
@@ -143,10 +141,10 @@ CREATE TABLE `shop` (
   `picture` varchar(255) NOT NULL DEFAULT 'default.png',
   `description` mediumtext NOT NULL DEFAULT 'No description',
   `date` date NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data untuk tabel `shop`
+-- Dumping data for table `shop`
 --
 
 INSERT INTO `shop` (`id`, `name`, `price`, `picture`, `description`, `date`) VALUES
@@ -162,7 +160,7 @@ INSERT INTO `shop` (`id`, `name`, `price`, `picture`, `description`, `date`) VAL
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `transaction`
+-- Table structure for table `transaction`
 --
 
 CREATE TABLE `transaction` (
@@ -175,10 +173,10 @@ CREATE TABLE `transaction` (
   `total_price` int(11) NOT NULL,
   `receipt` varchar(255) NOT NULL,
   `date_purchased` datetime NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data untuk tabel `transaction`
+-- Dumping data for table `transaction`
 --
 
 INSERT INTO `transaction` (`id`, `user_id`, `product_id`, `product_name`, `price`, `quantity`, `total_price`, `receipt`, `date_purchased`) VALUES
@@ -195,12 +193,13 @@ INSERT INTO `transaction` (`id`, `user_id`, `product_id`, `product_name`, `price
 (11, 2, 5, 'Professional Chess Clock Game Timer Analogue Clock ', 39, 1, 39, 'f240i9u61nj', '2022-07-04 13:19:30'),
 (12, 2, 7, 'Chess T Shirts', 14, 2, 28, 'f240i9u61nj', '2022-07-04 13:19:30'),
 (13, 2, 8, 'Bobby Fischer Teaches Chess by Bobby Fischer, Stuart Margulies and Don Mosenfelder', 12, 1, 12, 'f240i9u61nj', '2022-07-04 13:19:30'),
-(14, 2, 6, 'Digital Professional Chess Clock Count Up Down Timer ', 26, 1, 26, 'f240i9u61nj', '2022-07-04 13:19:30');
+(14, 2, 6, 'Digital Professional Chess Clock Count Up Down Timer ', 26, 1, 26, 'f240i9u61nj', '2022-07-04 13:19:30'),
+(15, 9, 1, 'Classic Chess Set', 119, 3, 357, 'sc712uy4avo', '2025-05-08 21:52:13');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `user`
+-- Table structure for table `user`
 --
 
 CREATE TABLE `user` (
@@ -213,10 +212,10 @@ CREATE TABLE `user` (
   `gender` varchar(255) NOT NULL DEFAULT 'unknown',
   `profile_picture` varchar(255) DEFAULT 'defaultProfile.png',
   `date_joined` date NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data untuk tabel `user`
+-- Dumping data for table `user`
 --
 
 INSERT INTO `user` (`id`, `email`, `name`, `password`, `phone`, `address`, `gender`, `profile_picture`, `date_joined`) VALUES
@@ -226,105 +225,106 @@ INSERT INTO `user` (`id`, `email`, `name`, `password`, `phone`, `address`, `gend
 (4, 'albert.412020012@civitas.ukrida.ac.id', 'Albert Saputra Zebua', '$2y$10$3iopNQ9YIn36dH/.eiqGmeWOR5qAsH2/ybFq2NoTgTDx5h8YPzUWm', '81219300633', 'Puri Permata Taman Buah D2/6', 'unknown', 'defaultProfile.png', '2022-06-27'),
 (5, 'maxy2020@gmail.com', 'maxy', '$2y$10$vjE4fA5wwEXYOSOFhHDDTOGMgSvgzrd2sqVrzUeXkhOVOyLcp1HiK', '12341234', 'ukrida', 'unknown', 'defaultProfile.png', '2022-06-27'),
 (6, 'denni@gmail.com', 'Denni', '$2y$10$uxKYfixOzU0tq4h5AHMp.eNDFV7i3Ed4I7pSwkEFy4RJf6tufFRVO', '087826136969', 'Jakarta', 'unknown', 'defaultProfile.png', '2022-06-29'),
-(7, 'michael@gmail.com', 'Michael Vin', '$2y$10$Btt6ORgsVXdcijyFjbBbIOcIXF1BVYATUpA/vchNK54Oa57Y6xTQC', '085235768843', 'Jakarta', 'unknown', 'defaultProfile.png', '2022-06-29');
+(7, 'michael@gmail.com', 'Michael Vin', '$2y$10$Btt6ORgsVXdcijyFjbBbIOcIXF1BVYATUpA/vchNK54Oa57Y6xTQC', '085235768843', 'Jakarta', 'unknown', 'defaultProfile.png', '2022-06-29'),
+(9, 'albert1@gmail.com', 'Albert Ardiansyah', '$2y$10$EtvLlgULCgueld0QkFXy..YX2gnyBJblo4SzWBSy7lPl3O7fVZ51i', '123', '123', 'unknown', 'defaultProfile.png', '2025-05-08');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indeks untuk tabel `admin`
+-- Indexes for table `admin`
 --
 ALTER TABLE `admin`
   ADD PRIMARY KEY (`email`);
 
 --
--- Indeks untuk tabel `authors`
+-- Indexes for table `authors`
 --
 ALTER TABLE `authors`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `feedback`
+-- Indexes for table `feedback`
 --
 ALTER TABLE `feedback`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `gallery`
+-- Indexes for table `gallery`
 --
 ALTER TABLE `gallery`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `news`
+-- Indexes for table `news`
 --
 ALTER TABLE `news`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `shop`
+-- Indexes for table `shop`
 --
 ALTER TABLE `shop`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `transaction`
+-- Indexes for table `transaction`
 --
 ALTER TABLE `transaction`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `user`
+-- Indexes for table `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT untuk tabel yang dibuang
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT untuk tabel `authors`
+-- AUTO_INCREMENT for table `authors`
 --
 ALTER TABLE `authors`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
--- AUTO_INCREMENT untuk tabel `feedback`
+-- AUTO_INCREMENT for table `feedback`
 --
 ALTER TABLE `feedback`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT untuk tabel `gallery`
+-- AUTO_INCREMENT for table `gallery`
 --
 ALTER TABLE `gallery`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT untuk tabel `news`
+-- AUTO_INCREMENT for table `news`
 --
 ALTER TABLE `news`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
--- AUTO_INCREMENT untuk tabel `shop`
+-- AUTO_INCREMENT for table `shop`
 --
 ALTER TABLE `shop`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT untuk tabel `transaction`
+-- AUTO_INCREMENT for table `transaction`
 --
 ALTER TABLE `transaction`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
--- AUTO_INCREMENT untuk tabel `user`
+-- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
