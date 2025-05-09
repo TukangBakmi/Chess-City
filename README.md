@@ -42,6 +42,9 @@
    http://localhost/Chess-City
    ```
 
+## 📸 Screenshots
+![image](https://github.com/user-attachments/assets/c8a03770-12af-4c2f-9c20-9e55511585ff)
+
 ## 🙋‍♂️ Author
 
 **Albert Ardiansyah**  
